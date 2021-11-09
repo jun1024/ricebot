@@ -75,6 +75,5 @@ async def 경매(ctx):
             expression += res.component.label
         f = discord.Embed(title='경매 분배금 계산기', description = expression, timestamp = delta)
         await res.respond(content = '', embed = f, type = 7)
-            
 
-client.run('OTA3NTU1NzM4NTMxMDEyNjA4.YYo5JQ.hgJtoiwoS3XvMyBddncqkcAQJDQ')
+client.run('OTA3NTU1NzM4NTMxMDEyNjA4.YYo5JQ.xI4OOCGaypiVocUQw5jLJ6-Elc8')
