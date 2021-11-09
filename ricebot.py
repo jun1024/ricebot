@@ -78,4 +78,3 @@ async def 경매(ctx):
             
 
 client.run('OTA3NTU1NzM4NTMxMDEyNjA4.YYo5JQ.un4noVHAmxwu2C79EnFk7C9eETs')
-
