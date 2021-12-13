@@ -20,24 +20,21 @@ buttons = [
         Button(style=ButtonStyle.gray, label='1'),
         Button(style=ButtonStyle.gray, label='2'),
         Button(style=ButtonStyle.gray, label='3'),
-        Button(style=ButtonStyle.green, label='4인최대'),
-        Button(style=ButtonStyle.red, label='←')
+        Button(style=ButtonStyle.green, label='4인최대')
     ],
     [
         Button(style=ButtonStyle.gray, label='4'),
         Button(style=ButtonStyle.gray, label='5'),
         Button(style=ButtonStyle.gray, label='6'),
         Button(style=ButtonStyle.green, label='4인선점'),
-        Button(style=ButtonStyle.red, label='←'),
-        Button(style=ButtonStyle.red, label='Clear')
+        Button(style=ButtonStyle.red, label='←')
     ],
     [
         Button(style=ButtonStyle.gray, label='7'),
         Button(style=ButtonStyle.gray, label='8'),
         Button(style=ButtonStyle.gray, label='9'),
         Button(style=ButtonStyle.blue, label='8인최대'),
-        Button(style=ButtonStyle.red, label='Clear'),
-        Button(style=ButtonStyle.red, label='종료')
+        Button(style=ButtonStyle.red, label='Clear')
     ],
     [
         Button(style=ButtonStyle.gray, label='00'),
