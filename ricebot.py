@@ -20,7 +20,7 @@ buttons = [
         Button(style=ButtonStyle.gray, label='1'),
         Button(style=ButtonStyle.gray, label='2'),
         Button(style=ButtonStyle.gray, label='3'),
-        Button(style=ButtonStyle.green, label=' 4인  '),
+        Button(style=ButtonStyle.green, label='4인최대'),
         Button(style=ButtonStyle.red, label='←')
     ],
     [
@@ -35,7 +35,7 @@ buttons = [
         Button(style=ButtonStyle.gray, label='7'),
         Button(style=ButtonStyle.gray, label='8'),
         Button(style=ButtonStyle.gray, label='9'),
-        Button(style=ButtonStyle.blue, label=' 8인  '),
+        Button(style=ButtonStyle.blue, label='8인최대'),
         Button(style=ButtonStyle.red, label='Clear'),
         Button(style=ButtonStyle.red, label='종료')
     ],
@@ -77,9 +77,9 @@ async def 경매(ctx):
                 expression = expression[:-1]
         elif res.component.label == 'Clear':
             expression = '_'
-        elif res.component.label == '4인':
+        elif res.component.label == '4인최대':
             expression = str(round(int(expression) * 0.7125))
-        elif res.component.label == '8인':
+        elif res.component.label == '8인최대':
             expression = str(round(int(expression) * 0.83125))
         elif res.component.label == '4인선점':
             expression = str(round(int(expression) * 0.6477))
