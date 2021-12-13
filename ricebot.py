@@ -72,7 +72,7 @@ async def 경매(ctx):
             expression = str(round(int(calculator(expression)) * 95 / 100 * 7 / 8))
         else:
             expression += res.component.label
-        f = discord.Embed(title='경매 분배금 계산기', description = expression, timestamp = delta)
+        f = discord.Embed(title='경매 분배금 계산기', description = expression)
         await res.respond(content = '', embed = f, type = 7)
 
 client.run(os.environ['token'])
