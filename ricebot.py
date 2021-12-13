@@ -83,7 +83,7 @@ async def 경매(ctx):
         else:
             expression += res.component.label
             expression2 = ''
-        f = discord.Embed(title='경매 분배금 계산기', description = expression + '\n' + expression2)
+        f = discord.Embed(title='경매 분배금 계산기', description = '최대 : ' + expression + '\n선점 : ' + expression2)
         await res.respond(content = '', embed = f, type = 7)
 
 client.run(os.environ['token'])
