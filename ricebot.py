@@ -53,6 +53,7 @@ buttons = [
 async def 경매(ctx):
     m = await ctx.send(content = 'Loading Calculator')
     expression = '_'
+    expression2 = ''
     e = discord.Embed(title = '경매 분배금 계산기', description = '거래소 최저가를 입력하세요.')
     await m.edit(components = buttons, embed = e)
     #delta = datetime.datetime.now + datetime.timedelta(minutes = 5)
@@ -62,20 +63,27 @@ async def 경매(ctx):
         expression = res.message.embeds[0].description
         if expression == '_' or expression == '거래소 최저가를 입력하세요.':
             expression = ''
+            expression2 = ''
         if res.component.label == '←':
             if len(expression) == 1:
                 expression = '_'
+                expression2 = ''
             else:
                 expression = expression[:-1]
+                expression2 = ''
         elif res.component.label == 'Clear':
             expression = '_'
+            expression2 = ''
         elif res.component.label == '4인':
             expression = str(round(int(expression) * 0.7125))
+            expression2 = str(round(int(expression) * 0.6477))
         elif res.component.label == '8인':
             expression = str(round(int(expression) * 0.83125))
+            expression2 = str(round(int(expression) * 0.7557))
         else:
             expression += res.component.label
-        f = discord.Embed(title='경매 분배금 계산기', description = expression)
+            expression2 = ''
+        f = discord.Embed(title='경매 분배금 계산기', description = expression + '\n' + expression2)
         await res.respond(content = '', embed = f, type = 7)
 
 client.run(os.environ['token'])
