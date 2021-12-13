@@ -55,7 +55,7 @@ buttons = [
 
 @client.command()
 async def 경매(ctx):
-    await ctx.channel.purge(1)
+    await ctx.channel.purge(limit = 1)
     m = await ctx.send(content = 'Loading Calculator')
     expression = '_'
     e = discord.Embed(title = '경매 분배금 계산기', description = '거래소 최저가를 입력하세요.')
