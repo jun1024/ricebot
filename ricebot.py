@@ -60,8 +60,8 @@ async def 경매(ctx):
         res = await client.wait_for('button_click')
         #if res.author.id == int(res.message.embeds[0].title.split('|')[1]) and res.message.embeds[0].timestamp < delta:
         expression = res.message.embeds[0].description
-        #if expression == '_' or expression == 'error' or expression == '거래소 최저가를 입력하세요.':
-        #    expression = ''
+        if expression == '_' or expression == 'error' or expression == '거래소 최저가를 입력하세요.':
+            expression = ''
         if res.component.label == '←':
             expression = expression[:-1]
         elif res.component.label == 'Clear':
