@@ -53,9 +53,9 @@ def calculator(exp):
 async def 경매(ctx):
     m = await ctx.send(content = 'Loading Calculator')
     expression = '_'
-    delta = datetime.datetime.now + datetime.timedelta(days=99)
     e = discord.Embed(title = '경매 분배금 계산기', description = '거래소 최저가를 입력하세요.')
     await m.edit(components = buttons, embed = e)
+    delta = datetime.datetime.now + datetime.timedelta(days=99)
     while m.created_at < delta:
         res = await client.wait_for('button_click')
         #if res.author.id == int(res.message.embeds[0].title.split('|')[1]) and res.message.embeds[0].timestamp < delta:
