@@ -67,9 +67,9 @@ async def 경매(ctx):
         elif res.component.label == 'Clear':
             expression = '_'
         elif res.component.label == '4인':
-            expression = str(round(int(calculator(expression)) * 95 / 100 * 3 / 4))
+            expression = str(round(int(calculator(expression)) * 0.7125))
         elif res.component.label == '8인':
-            expression = str(round(int(calculator(expression)) * 95 / 100 * 7 / 8))
+            expression = str(round(int(calculator(expression)) * 0.83125))
         else:
             expression += res.component.label
         f = discord.Embed(title='경매 분배금 계산기', description = expression)
