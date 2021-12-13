@@ -4,7 +4,7 @@ from discord import embeds
 from discord.errors import ClientException
 from discord.ext import commands
 from discord_components import *
-import datetime
+#import datetime
 import os
 
 client = commands.Bot(command_prefix = "/")
@@ -55,13 +55,13 @@ async def 경매(ctx):
     expression = '_'
     e = discord.Embed(title = '경매 분배금 계산기', description = '거래소 최저가를 입력하세요.')
     await m.edit(components = buttons, embed = e)
-    delta = datetime.datetime.now + datetime.timedelta(minutes = 5)
-    while m.created_at < delta:
+    #delta = datetime.datetime.now + datetime.timedelta(minutes = 5)
+    while True:
         res = await client.wait_for('button_click')
         #if res.author.id == int(res.message.embeds[0].title.split('|')[1]) and res.message.embeds[0].timestamp < delta:
         expression = res.message.embeds[0].description
-        if expression == '_' or expression == 'error' or expression == '거래소 최저가를 입력하세요.':
-            expression = ''
+        #if expression == '_' or expression == 'error' or expression == '거래소 최저가를 입력하세요.':
+        #    expression = ''
         if res.component.label == '←':
             expression = expression[:-1]
         elif res.component.label == 'Clear':
