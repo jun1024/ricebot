@@ -64,7 +64,7 @@ async def 경매(ctx):
             expression = ''
         if res.component.label == '←':
             if len(expression) == 1:
-                expression == '_'
+                expression = '_'
             else:
                 expression = expression[:-1]
         elif res.component.label == 'Clear':
