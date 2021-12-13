@@ -53,7 +53,7 @@ def calculator(exp):
 async def 경매(ctx):
     m = await ctx.send(content = 'Loading Calculator')
     expression = '_'
-    delta = datetime.datetime.utcnow() + datetime.timedelta(years=999)
+    delta = datetime.timedelta.max
     e = discord.Embed(title = '경매 분배금 계산기', description = '거래소 최저가를 입력하세요.')
     await m.edit(components = buttons, embed = e)
     while m.created_at < delta:
