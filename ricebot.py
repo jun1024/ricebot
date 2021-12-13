@@ -82,8 +82,8 @@ async def 경매(ctx):
             expression = str(round(int(expression) * 0.6477))
         elif res.component.label == '8인선점':
             expression = str(round(int(expression) * 0.7557))
-        # elif res.component.label == '종료':
-        #     await ctx.channel.purge(limit = 1)
+        elif res.component.label == '종료':
+            await ctx.channel.purge(limit = 1)
         else:
             expression += res.component.label
         f = discord.Embed(title='경매 분배금 계산기', description = expression)
