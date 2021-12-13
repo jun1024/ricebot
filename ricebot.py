@@ -75,15 +75,15 @@ async def 경매(ctx):
             expression = '_'
             expression2 = ''
         elif res.component.label == '4인':
-            expression = str(round(int(expression) * 0.7125))
-            expression2 = str(round(int(expression) * 0.6477))
+            expression = '최대 = ' + str(round(int(expression) * 0.7125))
+            expression2 = '\n선점 : ' + str(round(int(expression) * 0.6477))
         elif res.component.label == '8인':
-            expression = str(round(int(expression) * 0.83125))
-            expression2 = str(round(int(expression) * 0.7557))
+            expression = '최대 = ' + str(round(int(expression) * 0.83125))
+            expression2 = '\n선점 : ' + str(round(int(expression) * 0.7557))
         else:
             expression += res.component.label
             expression2 = ''
-        f = discord.Embed(title='경매 분배금 계산기', description = '최대 : ' + expression + '\n선점 : ' + expression2)
+        f = discord.Embed(title='경매 분배금 계산기', description = expression + expression2)
         await res.respond(content = '', embed = f, type = 7)
 
 client.run(os.environ['token'])
